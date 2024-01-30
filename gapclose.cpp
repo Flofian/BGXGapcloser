@@ -636,13 +636,13 @@ namespace agc
 				x->set_texture(hero->get_spell(spellslot::r)->get_icon_texture());
 				break;
 			case champion_id::Akali:
-				x = tab->add_checkbox("AkaliE", "Akali E1", true);
+				x = tab->add_checkbox("AkaliE", "Akali E1", false);
 				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture_by_index(0));
 				x = tab->add_checkbox("AkaliEb", "Akali E2", true);
 				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture_by_index(1));
 				x = tab->add_checkbox("AkaliR", "Akali R", true);
 				x->set_texture(hero->get_spell(spellslot::r)->get_icon_texture_by_index(0));
-				x = tab->add_checkbox("AkaliRb", "Akali R", true);
+				x = tab->add_checkbox("AkaliRb", "Akali R2", true);
 				x->set_texture(spell_icon("AkaliRb"));
 				break;
 			case champion_id::Alistar:
@@ -650,7 +650,7 @@ namespace agc
 				x->set_texture(hero->get_spell(spellslot::w)->get_icon_texture());
 				break;
 			case champion_id::Caitlyn:
-				x = tab->add_checkbox("CaitlynE", "Caitlyn E", true);
+				x = tab->add_checkbox("CaitlynE", "Caitlyn E", false);
 				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture());
 				break;
 			case champion_id::Camille:
@@ -674,7 +674,7 @@ namespace agc
 				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture());
 				break;
 			case champion_id::Elise:
-				x = tab->add_checkbox("EliseSpiderQCast", "Elise Spider Q", true);
+				x = tab->add_checkbox("EliseSpiderQCast", "Elise Spider Q", false);
 				x->set_texture(spell_icon("EliseSpiderQCast"));
 				x = tab->add_checkbox("EliseSpiderE", "Elise Spider E", true);
 				x->set_texture(spell_icon("EliseSpiderE"));
@@ -684,7 +684,7 @@ namespace agc
 				x->set_texture(spell_icon("EvelynnE2"));
 				break;
 			case champion_id::Fiora:
-				x = tab->add_checkbox("FioraQ", "Fiora Q", true);
+				x = tab->add_checkbox("FioraQ", "Fiora Q", false);
 				x->set_texture(hero->get_spell(spellslot::q)->get_icon_texture());
 				break;
 			case champion_id::Fizz:
@@ -714,13 +714,13 @@ namespace agc
 				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture());
 				break;
 			case champion_id::Hecarim:
-				x = tab->add_checkbox("HecarimRampAttack", "Hecarim E Attack", true);
+				x = tab->add_checkbox("HecarimRampAttack", "Hecarim E Attack", false);
 				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture());
 				x = tab->add_checkbox("HecarimUlt", "Hecarim R", true);
 				x->set_texture(hero->get_spell(spellslot::r)->get_icon_texture());
 				break;
 			case champion_id::Illaoi:
-				x = tab->add_checkbox("IllaoiWAttack", "Illaoi W Attack", true);
+				x = tab->add_checkbox("IllaoiWAttack", "Illaoi W Attack", false);
 				x->set_texture(hero->get_spell(spellslot::w)->get_icon_texture());
 				break;
 			case champion_id::Irelia:
@@ -746,7 +746,7 @@ namespace agc
 			case champion_id::Kayn:
 				x = tab->add_checkbox("KaynQ", "Kayn Q", true);
 				x->set_texture(hero->get_spell(spellslot::q)->get_icon_texture_by_index(0));
-				x = tab->add_checkbox("KaynRJumpOut", "Kayn R Exit", true);
+				x = tab->add_checkbox("KaynRJumpOut", "Kayn R Exit", false);
 				x->set_texture(spell_icon("KaynRJumpOut"));
 				break;
 			case champion_id::Khazix:
@@ -760,7 +760,7 @@ namespace agc
 				x->set_texture(hero->get_spell(spellslot::q)->get_icon_texture());
 				break;
 			case champion_id::Kled:
-				x = tab->add_checkbox("KledRiderQ", "Kled Shotgun Q", true);
+				x = tab->add_checkbox("KledRiderQ", "Kled Shotgun Q", false);
 				x->set_texture(spell_icon("KledRiderQ"));
 				x = tab->add_checkbox("KledEDash", "Kled E", true);
 				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture_by_index(0));	// here it works (index 1 is greyed out)
@@ -804,7 +804,7 @@ namespace agc
 				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture());
 				break;
 			case champion_id::Nidalee:
-				x = tab->add_checkbox("Pounce", "Nidalee W", true);
+				x = tab->add_checkbox("Pounce", "Nidalee Cougar W", true);
 				x->set_texture(spell_icon("Pounce"));
 				break;
 			case champion_id::Ornn:
@@ -813,7 +813,7 @@ namespace agc
 				break;
 			case champion_id::Pantheon:
 				x = tab->add_checkbox("PantheonW", "Pantheon W", true);
-				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture());
+				x->set_texture(hero->get_spell(spellslot::w)->get_icon_texture());
 				break;
 			case champion_id::Poppy:
 				x = tab->add_checkbox("PoppyE", "Poppy E", true);
@@ -875,13 +875,15 @@ namespace agc
 				x->set_texture(hero->get_spell(spellslot::w)->get_icon_texture());
 				x = tab->add_checkbox("SylasE", "Sylas E1", true);
 				x->set_texture(spell_icon("SylasE"));
+				x = tab->add_checkbox("SylasE2", "Sylas E2", true);
+				x->set_texture(spell_icon("SylasE2"));
 				break;
 			case champion_id::Talon:
 				x = tab->add_checkbox("TalonQ", "Talon Q", true);
 				x->set_texture(hero->get_spell(spellslot::q)->get_icon_texture());
 				break;
 			case champion_id::Tristana:
-				x = tab->add_checkbox("TristanaW", "TristanaW", true);
+				x = tab->add_checkbox("TristanaW", "Tristana W", true);
 				x->set_texture(hero->get_spell(spellslot::w)->get_icon_texture());
 				break;
 			case champion_id::Tryndamere:
@@ -929,7 +931,7 @@ namespace agc
 				x->set_texture(hero->get_spell(spellslot::e)->get_icon_texture());
 				break;
 			case champion_id::Zed:
-				x = tab->add_checkbox("ZedR", "Zed R", true);
+				x = tab->add_checkbox("ZedR", "Zed R", false);
 				x->set_texture(hero->get_spell(spellslot::r)->get_icon_texture());
 				break;
 			case champion_id::Zeri:
